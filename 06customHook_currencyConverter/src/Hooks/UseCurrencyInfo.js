@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react"
+import {useEffect, useState} from "react"
+
 
 function useCurrencyInfo(currency){
-    const [Data, setdata] = useState({});
+    const [data, setData] = useState({})
     useEffect(() => {
-        const API_Key = "9d73a3aa63e975fb396d9ab1";
-        fetch('https://v6.exchangerate-api.com/v6/${API_Key}/latest/${currency}.json')
+        let api_key = '9d73a3aa63e975fb396d9ab1';
+        fetch(`https://v6.exchangerate-api.com/v6/${api_key}/latest/${currency}`)
         .then((res) => res.json())
-        .then((res) => setData(res[conversion_rates]))
-        console.log(Data)
+        .then((res) => setData(res["conversion_rates"]))
+        console.log(data);
     }, [currency])
-    return Data
+    console.log(data);
+    return data
 }
 
 export default useCurrencyInfo;
