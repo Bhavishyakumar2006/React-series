@@ -24,7 +24,9 @@ function Home() {
                 fillRule="evenodd"
                 clipRule="evenodd"
               >
-                <path d="M1.571 23.664l10.531-10.501 3.712 3.701-12.519 6.941c-.476.264-1.059.26-1.532-.011l-.192-.13zm9.469-11.56l-10.04 10.011v-20.022l10.04 10.011zm6.274-4.137l4.905 2.719c.482.268.781.77.781 1.314s-.299 1.046-.781 1.314l-5.039 2.793-4.015-4.003 4.149-4.137zm-15.854-7.534c.09-.087.191-.163.303-.227.473-.271 1.056-.275 1.532-.011l12.653 7.015-3.846 3.835-10.642-10.612z" />
+                <path d="M1.571 23.664l10.531-10.501 3.712 3.701-12.519 6.941c-.476.264-1.059.26-1.532-.011l-.192-.13zm9.469-11.56l-10.04
+                 10.011v-20.022l10.04 10.011zm6.274-4.137l4.905 2.719c.482.268.781.77.781 1.314s-.299 1.046-.781 1.314l-5.039 2.793-4.015-4.003
+                  4.149-4.137zm-15.854-7.534c.09-.087.191-.163.303-.227.473-.271 1.056-.275 1.532-.011l12.653 7.015-3.846 3.835-10.642-10.612z" />
               </svg>
               &nbsp; Download now
             </Link>
@@ -34,7 +36,7 @@ function Home() {
         <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
           <img
             className="w-96"
-            src="https://i.ibb.co/5BCcDYB/Remote2.png"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHQ047iLHf77ihBle4tp2QKS7J5zmI_20kP2Ob6d28Aw&s=10"
             alt="image1"
           />
         </div>
@@ -43,7 +45,7 @@ function Home() {
       <div className="grid  place-items-center sm:mt-20">
         <img
           className="sm:w-96 w-48"
-          src="https://i.ibb.co/2M7rtLk/Remote1.png"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzFnicAjngWRax_H0b2uX9HrI4I9YBt_5qoTAIhyBxVQ&s=10"
           alt="image2"
         />
       </div>
