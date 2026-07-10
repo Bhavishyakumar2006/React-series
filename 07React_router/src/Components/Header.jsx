@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className="shadow sticky z-50 top-0">
       <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
-        <div className="flex flex-wrap justify-between items-center mx-80 ">
+        <div className="flex flex-wrap justify-between items-center mx-52 ">
           <Link to="/" className="flex items-center">
             <img
               src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
@@ -65,6 +65,17 @@ function Header() {
                   }
                 >
                   Contact Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to={"/Github"}
+                  className={({ isActive }) =>
+                    `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100
+                     lg:hover:bg-transparent lg:border-0 ${isActive ? "text-orange-700" : "text-black"} lg:p-0`
+                  }
+                >
+                  Github
                 </NavLink>
               </li>
             </ul>
