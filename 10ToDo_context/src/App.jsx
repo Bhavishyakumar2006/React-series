@@ -10,10 +10,12 @@ function App() {
   const updateTodo = (id, todo) => {
     setTodos((prev) => prev.map((prevTodo) => prevTodo.id === id ? todo : prevTodo))
   }
-  // const toggleTodo = (id) => {
-  //   setTodos((prev) => prev.map((prevTodo) => prevTodo.id === id ?  : ))
-  // }
-  const deleteTodo = () => {}
+  const deleteTodo = (id) => {
+    setTodos((prev) => prev.filter((prevTodo) => prevTodo.id !== id) )
+  }
+  const toggleTodo = (id) => {
+    setTodos((prev) => prev.map((prevTodo) => prevTodo.id === id ? {...prevTodo, completed: !prevTodo.completed} : prevTodo) )
+  }
 
   return (
     <TodoContextProvider value={{todos, addTodo, updateTodo, toggleTodo, deleteTodo}}>
