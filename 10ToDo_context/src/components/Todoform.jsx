@@ -8,7 +8,7 @@ function Todoform() {
 
   const add = (e) => {
     e.preventDefault()
-    if (todo && todo.length > 0) {
+    if (todomsg && todomsg.length > 0) {
       addTodo({id: Date.now(), todoMsg: todomsg, completed: false})
       setTodomsg("")
     }
