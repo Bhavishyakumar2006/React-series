@@ -6,9 +6,13 @@ function AddTodo() {
     const [input, setInput] = React.useState("");
     const dispatch = useDispatch()
     const addTodoHandler = (e) => {
-        e.preventDefault()
+      e.preventDefault()
+      if (input.length > 0) {
         dispatch(addTodo(input))
         setInput('')
+      }else{
+        alert("Enter the Todo first")
+      }
     }
   return (
     <form onSubmit={addTodoHandler} className="space-x-3 mt-12 w-3xl mx-auto">
