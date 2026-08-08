@@ -7,11 +7,11 @@ import { Provider } from 'react-redux'
 
 
 function App() {
-
+  const [isTodoEditable, setIsTodoEditable] = useState(false)
   return (
     <Provider store={store}>
-    <AddTodo />
-    <Todos />
+    <AddTodo isTodoEditable ={isTodoEditable} setIsTodoEditable={setIsTodoEditable} />
+    <Todos isTodoEditable ={isTodoEditable} setIsTodoEditable={setIsTodoEditable} />
     </Provider>
   )
 }
