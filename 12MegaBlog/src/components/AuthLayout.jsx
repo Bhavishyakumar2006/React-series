@@ -19,4 +19,4 @@ function Protected({children, authantication = true}) {
   return loader ? <h1>Loading...</h1> : <>{children}</>
 }
 
-export default Pretected
+export default Protected

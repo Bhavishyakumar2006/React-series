@@ -8,15 +8,16 @@ import authService from "../src/appwrite/Auth_service";
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const Dispatch = useDispatch()
 
   useEffect(() => {
     authService
       .getCurrentUser()
       .then((userData) => {
         if (userData) {
-          useDispatch(login(userData));
+          Dispatch(login(userData));
         } else {
-          useDispatch(logOut());
+          Dispatch(logOut());
         }
       })
       .finally(() => setLoading(false));
