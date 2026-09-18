@@ -3,12 +3,13 @@ import React from 'react'
 function Button({
     children,
     className = '',
+    bgColor,
     type = 'button',
     ...props
 }) {
   return (
     
-    <button className={`${className}`} {...props}>{children}</button>
+    <button className={`${className} ${bgColor}`} {...props}>{children}</button>
   )
 }
 

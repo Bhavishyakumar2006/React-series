@@ -5,7 +5,7 @@ import databaseService from "../appwrite/Database_service";
 function AllPostsPage() {
   const [posts, setposts] = useState([]);
   useEffect(() => {
-    databaseService.getAllDocuments().then((posts) => setposts(posts.documents));
+    databaseService.getAllDocuments().then((posts) => setposts(posts.rows));
   }, []);
   return (
     <div className="w-full py-8">

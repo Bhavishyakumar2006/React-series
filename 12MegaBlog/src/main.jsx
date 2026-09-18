@@ -10,14 +10,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router";
-import Home from "./pages/HomePage.jsx";
-import Login from "./pages/loginPage.jsx";
-import Signup from "./pages/signUpPage.jsx";
-import AllPosts from "./pages/AllPostsPage.jsx";
-import AddPost from "./pages/AddPostPage.jsx";
-import EditPost from "./pages/EditPostPage.jsx";
-import Post from "./pages/PostPage.jsx";
-import { authLayout } from "./components/Index.js";
+import { AuthLayout, Home, Login, Signup, AllPosts, AddPost, EditPostPage, PostPage } from "./components/Index.js";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,46 +19,50 @@ const router = createBrowserRouter(
       <Route
         path="/login"
         element={
-          <authLayout authentication={false}>
+          <AuthLayout authentication={false}>
             <Login />
-          </authLayout>
+          </AuthLayout>
         }
       />
       <Route
         path="/signup"
         element={
-          <authLayout authentication={false}>
+          <AuthLayout authentication={false}>
             <Signup />
-          </authLayout>
+          </AuthLayout>
         }
       />
       <Route
         path="/all-posts"
         element={
-          <authLayout authentication>
+          <AuthLayout authentication>
             <AllPosts />
-          </authLayout>
+          </AuthLayout>
         }
       />
       <Route
         path="/Add-post"
         element={
-          <authLayout authentication>
+          <AuthLayout authentication>
             <AddPost />
-          </authLayout>
+          </AuthLayout>
         }
       />
       <Route
         path="/edit-post/:slug"
         element={
-          <authLayout authentication>
+          <AuthLayout authentication>
             {""}
-            <EditPost />
-          </authLayout>
+            <EditPostPage />
+          </AuthLayout>
         }
       />
-      <Route path="/post/:slug" />
-    </Route>,
+      <Route path="/post/:slug" 
+        element={
+          <PostPage />
+        }
+      />
+    </Route>
   ),
 );
 

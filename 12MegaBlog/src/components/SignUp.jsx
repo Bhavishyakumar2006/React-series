@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import authService from "../appwrite/Auth_service";
-import { useNavigate } from "react-router";
+import {Link, useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import { login } from "../store/Authslice";
 import { Button, Input, Logo } from "./Index";

@@ -60,7 +60,7 @@ function PostForm({ post }) {
       return value
         .trim()
         .toLowerCase()
-        .replace(/^[a-zA-Z\d]+/g, "-");
+        .replace(/[^a-zA-Z\d]+/g, "-");
 
     return "";
   }, []);
@@ -119,7 +119,7 @@ function PostForm({ post }) {
             />
           </div>
         )}
-        <Select
+        <select
           options={["active", "inactive"]}
           label="Status"
           className="mb-4"

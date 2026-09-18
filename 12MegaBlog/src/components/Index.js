@@ -11,7 +11,14 @@ import signUp from './SignUp'
 import login from './Login'
 import PostForm from './post-form/PostForm'
 import PostCard from "./PostCard";
-import authLayout from '../components/AuthLayout'
+import AuthLayout from '../components/AuthLayout'
+import Home from "../pages/HomePage.jsx";
+import Login from "../pages/loginPage.jsx";
+import Signup from "../pages/signUpPage.jsx";
+import AllPosts from "../pages/AllPostsPage.jsx";
+import AddPost from "../pages/AddPostPage.jsx";
+import EditPostPage from "../pages/EditPostPage.jsx";
+import PostPage from "../pages/PostPage.jsx";
 
 export {
     Header,
@@ -27,5 +34,12 @@ export {
     login,
     PostForm,
     PostCard,
-    authLayout
+    AuthLayout,
+    Home,
+    Login,
+    Signup,
+    AllPosts,
+    AddPost,
+    EditPostPage,
+    PostPage
 }

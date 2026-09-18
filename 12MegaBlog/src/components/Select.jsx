@@ -13,7 +13,7 @@ function Select({
         {label && <label htmlFor={id}>{ label }</label>}
         <select className={`${className}`} {...props} id={id} ref={ref}>
             {
-                option?.map((option) => {
+                options?.map((option) => {
                     <option key={option} value={option}>
                         {option}
                     </option>
