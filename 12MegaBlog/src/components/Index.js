@@ -6,7 +6,7 @@ import LogOutBtn from "./header/LogOutBtn";
 import Button from './Button'
 import Input from './Input'
 import RTE from './RTE'
-import select from './Select'
+import Select from './Select'
 import signUp from './SignUp'
 import login from './Login'
 import PostForm from './post-form/PostForm'
@@ -29,7 +29,7 @@ export {
     Button,
     Input,
     RTE,
-    select,
+    Select,
     signUp,
     login,
     PostForm,

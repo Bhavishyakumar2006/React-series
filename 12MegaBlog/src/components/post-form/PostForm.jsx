@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { Button, Input, select, RTE } from "../Index";
+import { Button, Input, Select, RTE } from "../Index";
 import storageservice from "../../appwrite/Storage_service";
 import databaseService from "../../appwrite/Database_service";
 import { useNavigate } from "react-router";
@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 
 function PostForm({ post }) {
   const navigate = useNavigate();
-  const UserData = useSelector((state) => state.auth.useData);
+  const UserData = useSelector((state) => state.auth.userData);
   const { register, handleSubmit, control, watch, setValue, getValues } =
     useForm({
       defaultValues: {
@@ -42,7 +42,7 @@ function PostForm({ post }) {
         ? storageservice.uploadFile(data.image[0])
         : null;
       if (file) {
-        const createPost = await databaseService.createDocument({
+        const createPost = await databaseService.createRow({
           ...data,
           slug: file ? file.$id : null,
           featuredimage: file ? file.$id : null,
@@ -119,7 +119,7 @@ function PostForm({ post }) {
             />
           </div>
         )}
-        <select
+        <Select
           options={["active", "inactive"]}
           label="Status"
           className="mb-4"

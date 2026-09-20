@@ -1,5 +1,5 @@
 import conf from "../conf/Conf";
-import { Client, TablesDB, Query } from "appwrite";
+import { Client, ID, TablesDB, Query } from "appwrite";
 
 class DatabaseService {
   client = new Client();
@@ -9,7 +9,7 @@ class DatabaseService {
     this.database = new TablesDB(this.client);
   }
 
-  async createDocument({
+  async createRow({
     title,
     slug,
     content,
@@ -18,7 +18,8 @@ class DatabaseService {
     userid,
   }) {
     try {
-      return await this.database.createDocument({
+      return await this.database.createRow({
+        rowId: ID.unique(),
         databaseId: conf.database_id,
         tableId: conf.table_id,
         slug,
